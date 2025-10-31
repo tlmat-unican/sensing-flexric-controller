@@ -1,5 +1,5 @@
 
-# Unican-dev
+# Sensing FlexRIC Platform
 
 This repository provides a suite of tools for emulation and testing within the O-RAN Alliance framework. It includes E2 node emulators, a Near-RT RIC, and various xApps.
 
@@ -16,12 +16,12 @@ This project is built upon **FlexRIC**, which provides the foundational componen
 
 For further details on installation and operation, please refer to the original [OAI-FlexRIC](https://gitlab.eurecom.fr/mosaic5g/flexric) repository.
 
-## :microscope: Sensing Service Model
+## Sensing Service Model
 
 This implementation focuses on a service model designed for collecting sensing data.
 
 - **Location**: The source code is located in the [`./src/sm/new_sm/`](./src/sm/new_sm/) folder.
-- **Information Element (IE)**: The predefined data unit used to gather information is defined in the [`ie/new_data_ie.h`](./src/sm/new_sm/ie/new_data_ie.h) file.
+- **Information Element (IE)**: The define data unit used to gather information is defined in the [`ie/new_data_ie.h`](./src/sm/new_sm/ie/new_data_ie.h) file, also the control commands.
 
 ## Running the Components
 
@@ -29,6 +29,7 @@ This section details the commands to execute each component of the system.
 
 > [!IMPORTANT]
 > All configuration files are located in the [`conf_files/`](./conf_files/) directory. To set the IP address, edit the corresponding configuration file and update the `NearRT_RIC_IP` field.
+> Before running the experiments, execute [`create_env.sh`](./.create_env.sh) and set the MTU to 9000B on the E2 interface.
 
 ### 1. Near-RT RIC
 
