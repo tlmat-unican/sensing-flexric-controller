@@ -1,5 +1,5 @@
 
-# Sensing FlexRIC Platform
+# Sensing FlexRIC + Controller Platform
 
 This repository provides a suite of tools for emulation and testing within the O-RAN Alliance framework. It includes E2 node emulators, a Near-RT RIC, and various xApps.
 
