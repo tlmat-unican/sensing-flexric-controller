@@ -45,12 +45,12 @@ The example xApp is located at [`/examples/xApp/c/monitor/xapp_new_moni.c`](./ex
 To launch the xApp:
 
 ```bash
-./build/examples/xApp/c/monitor/xapp_new_moni -c ./conf_files/xapp_new_sm.conf
+./build/examples/xApp/c/monitor/xapp_sense_moni -c ./conf_files/xapp_new_sm.conf
 ```
 
 ### 3. E2 Agent
 
-The E2 agent ([`test_agent2.c`](./examples/emulator/agent/test_agent2.c)) receives sensing information from the processing unit, parses it, and makes it available to the Near-RT RIC.
+The E2 agent ([`test_agent3.c`](./examples/emulator/agent/test_agent2.c)) receives sensing information from the processing unit, parses it, and makes it available to the Near-RT RIC.
 
 To launch the agent:
 
@@ -104,7 +104,7 @@ To validate the PID controller's performance in allocating capacity to achieve a
 3.  **Launch the xApp with PID**
     ```bash
     # Usage: ./executable -c <conf_file> <target_delay_ms> <Kp> <T_change_ms>
-    ./build/examples/xapp_cust_sense_moni_ctrl_cmd_slot -c ./conf_files/xapp_new_sm.conf <del_target_ms> <Kp> <T_change_ms>
+    ./build/examples/xapp_cust_sense_moni_ctrl_cmd_slot -c ./conf_files/xapp_new_sm.conf 80 1 1000
     ```
 4.  **(Optional) Generate Background Traffic**
     Run `client_bk.py` and `server_bk.py` from the [`test-PID/`](./test-PID/) directory to simulate background traffic.
